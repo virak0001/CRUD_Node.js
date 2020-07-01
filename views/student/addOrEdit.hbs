@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+<form action="/student/store" method="POST" autocomplete="off">
+    <div class="form-group">
+        <input type="hidden" value="{{student._id}}">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Name">
+         <div class="text-danger">
+            {{student.nameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email">
+         <div class="text-danger">
+            {{student.emailError}}</div>
+       
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile">
+             <div class="text-danger">
+            {{student.mobileError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="City">
+             <div class="text-danger">
+            {{student.cityError}}</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
